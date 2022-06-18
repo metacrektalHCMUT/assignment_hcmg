@@ -27,6 +27,7 @@
             $_SESSION['User_name'] = $auth->User_name;
             $_SESSION['isLogged'] = true;
             $_SESSION['cartNum'] = count($user->cart);
+            $_SESSION['isAdmin'] = $auth->is_Admin;
             if ($auth->is_Admin == 1) echo json_encode(array('message' => 'Welcome admin '.$User_name.'!', 'status' => 'succ_admin'));
             else echo json_encode(array('message' => 'Welcome back '.$User_name.'!', 'status' => 'succ_user'));
         }

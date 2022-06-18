@@ -156,7 +156,9 @@
 	<script type="text/javascript"> 
 		var userId = "<?php echo isset($_SESSION['User_id']) ? $_SESSION['User_id'] : null; ?>";
 		var isLogged = "<?php echo isset($_SESSION['isLogged']) ? $_SESSION['isLogged'] : null; ?>";
+		var isAdmin = "<?php echo isset($_SESSION['isAdmin']) ? $_SESSION['isAdmin'] : null; ?>";
 		var site_home = true, site_prod = false, site_cart = false, site_user = false;
+		if (isAdmin) window.location.replace('admin-home.php');
 	</script>
 	<script src="js/jquery-1.11.1.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
