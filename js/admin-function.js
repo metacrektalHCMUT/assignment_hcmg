@@ -210,7 +210,7 @@ async function admin_loadAllProducts(){
         url: 'php/api/load_allProd.php?type="full"',
         success: function(response){
             let prod_list = response['data'];
-            let itemsPerPage = 2;
+            let itemsPerPage = 10;
             let numPages = Math.ceil(prod_list.length / itemsPerPage);
             $('.panel-prod div h3').html(prod_list.length);
 
